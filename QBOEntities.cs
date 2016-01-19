@@ -8,7 +8,7 @@ namespace FirebirdEF6Test
     public class QBOEntities : DbContext
     {
         public QBOEntities()
-            : base(new FbConnection(@"database=C:\Data\test.fdb;user=sysdba;password=masterkey"), true)
+            : base(new FbConnection(@"database=C:\Data\test.fdb;user=sysdba;password=masterkey;dialect=3"), true)
         {
             Database.SetInitializer(new CreateDatabaseIfNotExists<QBOEntities>());
         }
